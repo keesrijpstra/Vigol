@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.dashboard');
 })->name('home');
+Route::get('/users', function () {
+    return view('layouts.users');
+})->name('users.index');
 
 
 require __DIR__.'/auth.php';
