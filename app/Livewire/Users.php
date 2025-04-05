@@ -12,6 +12,13 @@ class Users extends Component
     {
         $this->users = \App\Models\User::all();
     }
+
+    public function showEditUserSlideOver($userId)
+    {
+        $user = \App\Models\User::find($userId);
+        $this->dispatch('openPanel', 'Edit User Debug', 'App\Livewire\SlideOver\SlideOver', []);
+    }
+    
     public function render()
     {
         return view('livewire.users');
