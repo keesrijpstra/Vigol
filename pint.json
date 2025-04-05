@@ -1,0 +1,72 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "array_syntax": {
+            "syntax": "short"
+        },
+        "ordered_imports": {
+            "sort_algorithm": "alpha"
+        },
+        "no_unused_imports": true,
+        "not_operator_with_successor_space": true,
+        "phpdoc_scalar": true,
+        "phpdoc_single_line_var_spacing": true,
+        "phpdoc_var_without_name": true,
+        "class_attributes_separation": {
+            "elements": {
+                "method": "one"
+            }
+        },
+        "method_chaining_indentation": true,
+        "indentation_type": true,
+        "single_quote": true,
+        "binary_operator_spaces": {
+            "default": "single_space"
+        },
+        "blank_line_before_statement": {
+            "statements": ["return"]
+        },
+        "braces": {
+            "allow_single_line_anonymous_class_with_empty_body": true,
+            "allow_single_line_closure": true,
+            "position_after_anonymous_constructs": "same",
+            "position_after_control_structures": "same",
+            "position_after_functions_and_oop_constructs": "next"
+        },
+        "concat_space": {
+            "spacing": "one"
+        },
+        "declare_equal_normalize": {
+            "space": "single"
+        },
+        "function_typehint_space": true,
+        "include": true,
+        "increment_style": {
+            "style": "post"
+        },
+        "lowercase_cast": true,
+        "single_line_comment_style": {
+            "comment_types": ["hash"]
+        },
+        "clean_namespace": true,
+        "no_leading_namespace_whitespace": true,
+        "operator_linebreak": {
+            "position": "end"
+        },
+        "php_unit_fqcn_annotation": true,
+        "phpdoc_align": {
+            "tags": ["method", "param", "property", "return", "throws", "type", "var"]
+        },
+        "phpdoc_indent": true,
+        "general_phpdoc_tag_rename": true,
+        "single_line_throw": true,
+        "trailing_comma_in_multiline": {
+            "elements": ["arrays"]
+        },
+        "php_unit_method_casing": {
+            "case": "camel_case"
+        },
+        "blank_line_after_opening_tag": true
+    },
+    "indent": 4
+}

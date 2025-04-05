@@ -11,6 +11,9 @@ Route::get('/', function () {
 Route::get('/users', function () {
     return view('layouts.users');
 })->name('users.index');
+Route::get('/roles', function () {
+    return view('layouts.roles');
+})->name('roles.index');
 
 
 require __DIR__.'/auth.php';
