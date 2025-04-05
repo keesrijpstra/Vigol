@@ -9,7 +9,6 @@ use Spatie\Permission\Models\Role;
 class ListRoles extends Component
 {
     public $roles;
-    public $showSlideOver = false;
 
     public function mount()
     {
@@ -18,16 +17,18 @@ class ListRoles extends Component
 
     public function showAddroleSlideOver()
     {
-        if ($this->showSlideOver === true) {
-            return $this->showSlideOver = false;
-        }
-        
-        $this->showSlideOver = true;
+        $this->dispatch('openPanel', 'New Role', 'App\Livewire\SlideOver\SlideOver');
     }
-    #[On('close-slide-over')]
-    public function hideSlideOver()
+
+    #[On('role-created')]
+    public function refreshRoles()
     {
-        $this->showSlideOver = false;
+        $this->roles = Role::all();
+    }
+
+    public function getRoleCount($role)
+    {
+        return $role->users()->count();
     }
 
     public function render()
