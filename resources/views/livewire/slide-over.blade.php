@@ -17,9 +17,6 @@
                 </button>
             </div>
         </div>
-        <div class="mt-1">
-            <p class="text-sm text-indigo-300">Create a new role with specific permissions.</p>
-        </div>
     </div>
 
     <div class="flex-1 overflow-y-auto">

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 <body class="h-full overflow-hidden">
     <header class="z-50 sticky top-0">
@@ -133,5 +134,6 @@
         @yield('content')
       </div>
     </main>
+    <livewire:notification-manager />
 </body>
 </html>

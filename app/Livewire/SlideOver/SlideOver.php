@@ -3,11 +3,14 @@
 namespace App\Livewire\SlideOver;
 
 use App\GuardNameType;
+use App\HasNotifications;
 use Livewire\Component;
 use Spatie\Permission\Models\Role;
 
 class SlideOver extends Component
 {
+    use HasNotifications;
+
     public $guards = [];
     public $guard = 'web';
     public $name = '';
@@ -50,6 +53,12 @@ class SlideOver extends Component
         $this->reset(['name', 'guard']);
         $this->dispatch('closePanel');
         $this->dispatch('role-created');
+
+        $this->notification(
+            'Role Created',
+            'The role has been created successfully.',
+            'success'
+        );
     }
 
     public function render()
