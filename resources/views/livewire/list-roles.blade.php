@@ -42,7 +42,7 @@
                                         {{ $role->guard_name }}</td>
                                     <td class="px-3 py-4 text-sm whitespace-nowrap text-gray-500">
                                         {{ $this->getRoleCount($role) }}</td>
-                                    <td class="relative py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0">
+                                    <td class="relative py-4 pr-4 pl-3 text-right text-sm font-medium whitespace-nowrap sm:pr-0" @wire:click="showEditRoleSlideOver({{ $role->id }})">
                                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, {{ $role->name }}</span></a>
                                     </td>
                                 </tr>

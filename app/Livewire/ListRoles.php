@@ -20,6 +20,13 @@ class ListRoles extends Component
         $this->dispatch('openPanel', 'New Role', 'App\Livewire\SlideOver\SlideOver');
     }
 
+    public function showEditRoleSlideOver($role)
+    {
+        $this->dispatch('openPanel', 'Edit Role', 'App\Livewire\showRoleEditSlideOver', [
+            'role' => $role,
+        ]);
+    }
+
     #[On('role-created')]
     public function refreshRoles()
     {
