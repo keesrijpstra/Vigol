@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('content')
-    @livewire('users')
-
+    @livewire('list-roles')
+    
     @livewire('slide-over-panel')
 @endsection
